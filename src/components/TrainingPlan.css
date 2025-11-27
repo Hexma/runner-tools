@@ -1,0 +1,954 @@
+/* Training Plan Styles */
+.training-plan {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.plan-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.plan-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.plan-header p {
+  color: #6c757d;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Plan Highlights */
+.plan-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+  border: 2px solid #c8e6c9;
+  border-radius: 12px;
+  border-left: 5px solid #4CAF50;
+}
+
+.highlight-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.highlight-content h4 {
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.highlight-content p {
+  color: #558b2f;
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* Parameters */
+.plan-parameters {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.param-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.param-item label {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.param-item input {
+  width: 150px;
+  padding: 0.5rem;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.param-item input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  background: #f1f8e9;
+}
+
+/* Week Selector */
+.week-selector {
+  margin-bottom: 2rem;
+}
+
+.week-selector h3 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.week-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+  max-width: 900px;
+}
+
+.week-btn {
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+}
+
+.week-btn:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.week-btn.active {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Current Week Info */
+.current-week-info {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid #e9ecef;
+}
+
+.week-header {
+  margin-bottom: 2rem;
+}
+
+.week-header h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.week-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+}
+
+.stat .label {
+  color: #6c757d;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stat .value {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Workouts Grid */
+.workouts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Monday Rest Day spans full width */
+.workouts-grid .workout-card:first-child {
+  grid-column: 1 / -1;
+  max-width: 100%;
+}
+
+.workout-card {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.workout-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.workout-day {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.workout-body {
+  padding: 1rem;
+}
+
+.workout-name {
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.zone-badge {
+  display: inline-block;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.workout-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.5rem;
+  background: white;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.detail-item .label {
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.detail-item .value {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.workout-description {
+  color: #5a6c7d;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 0.5rem;
+  background: #fff9c4;
+  border-radius: 4px;
+  border-left: 3px solid #fbc02d;
+}
+
+/* Zone Legend */
+.zone-legend {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.zone-legend h3 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.zone-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.zone-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.zone-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.zone-item span {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Training Tips */
+.training-tips {
+  background: #f1f8e9;
+  border: 2px solid #c8e6c9;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 5px solid #4CAF50;
+}
+
+.training-tips h3 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.training-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.training-tips li {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.training-tips li:last-child {
+  border-bottom: none;
+}
+
+.training-tips strong {
+  color: #1976d2;
+  font-weight: 700;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .workouts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .workouts-grid .workout-card:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tablet Responsive - Extra */
+@media (max-width: 900px) {
+  .training-plan {
+    padding: 1.25rem;
+  }
+
+  .param-item input {
+    width: 120px;
+  }
+
+  .plan-highlights {
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .training-plan {
+    padding: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .plan-header h2 {
+    font-size: 1.3rem;
+    word-break: break-word;
+  }
+
+  .plan-header p {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .plan-highlights {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .highlight-card {
+    padding: 0.8rem;
+    gap: 0.7rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.5rem;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.8rem;
+  }
+
+  .plan-parameters {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .param-item {
+    width: 100%;
+  }
+
+  .param-item input {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .week-buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3rem;
+  }
+
+  .week-btn {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .workouts-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .workouts-grid .workout-card:first-child {
+    grid-column: 1;
+  }
+
+  .workout-day {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .workout-body {
+    padding: 0.75rem;
+  }
+
+  .workout-name {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .zone-badge {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .week-stats {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .stat {
+    padding: 0.8rem;
+    border-left-width: 3px;
+  }
+
+  .stat .label {
+    font-size: 0.8rem;
+  }
+
+  .stat .value {
+    font-size: 1rem;
+  }
+
+  .zone-items {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .zone-item {
+    padding: 0.6rem;
+  }
+
+  .zone-color {
+    width: 25px;
+    height: 25px;
+  }
+
+  .current-week-info {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .week-header h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .training-tips {
+    padding: 1rem;
+  }
+
+  .training-tips h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .training-tips li {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+
+  .zone-legend {
+    padding: 1rem;
+  }
+
+  .zone-legend h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .training-plan {
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .plan-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .plan-header h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+    word-break: break-word;
+  }
+
+  .plan-header p {
+    font-size: 0.8rem;
+    word-break: break-word;
+  }
+
+  .plan-highlights {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .highlight-card {
+    padding: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .highlight-icon {
+    font-size: 1.3rem;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .plan-parameters {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+  }
+
+  .param-item {
+    width: 100%;
+  }
+
+  .param-item label {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .param-item input {
+    width: 100%;
+    max-width: 120px;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .week-selector {
+    margin-bottom: 1rem;
+  }
+
+  .week-selector h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .week-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25rem;
+    max-width: 100%;
+  }
+
+  .week-btn {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.7rem;
+  }
+
+  .current-week-info {
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .week-header h3 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .workouts-grid {
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .workout-card {
+    border-radius: 8px;
+  }
+
+  .workout-day {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+  }
+
+  .workout-body {
+    padding: 0.6rem;
+  }
+
+  .workout-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+    word-break: break-word;
+  }
+
+  .detail-item {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .zone-badge {
+    padding: 0.15rem 0.5rem;
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .workout-description {
+    font-size: 0.75rem;
+    padding: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .week-stats {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .stat {
+    padding: 0.6rem;
+    border-left-width: 3px;
+  }
+
+  .stat .label {
+    font-size: 0.75rem;
+  }
+
+  .stat .value {
+    font-size: 0.95rem;
+  }
+
+  .zone-legend {
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .zone-legend h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .zone-items {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .zone-item {
+    padding: 0.5rem;
+  }
+
+  .zone-color {
+    width: 20px;
+    height: 20px;
+  }
+
+  .zone-item span {
+    font-size: 0.8rem;
+  }
+
+  .training-tips {
+    border-radius: 8px;
+    padding: 0.75rem;
+  }
+
+  .training-tips h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .training-tips li {
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .training-plan {
+    padding: 0.3rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  .plan-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .plan-header h2 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    word-break: break-word;
+  }
+
+  .plan-header p {
+    font-size: 0.75rem;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .plan-highlights {
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .highlight-card {
+    padding: 0.5rem;
+    gap: 0.4rem;
+    border-radius: 8px;
+  }
+
+  .highlight-icon {
+    font-size: 1.1rem;
+  }
+
+  .highlight-content h4 {
+    font-size: 0.8rem;
+  }
+
+  .highlight-content p {
+    font-size: 0.7rem;
+    line-height: 1.25;
+  }
+
+  .plan-parameters {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+  }
+
+  .param-item label {
+    font-size: 0.75rem;
+  }
+
+  .param-item input {
+    width: 100%;
+    max-width: 100px;
+    padding: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  .week-selector h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .week-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2rem;
+  }
+
+  .week-btn {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.65rem;
+    border-radius: 4px;
+  }
+
+  .current-week-info {
+    padding: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .week-header h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .workouts-grid {
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .workout-day {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .workout-body {
+    padding: 0.5rem;
+  }
+
+  .workout-name {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    word-break: break-word;
+  }
+
+  .detail-item {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  .zone-badge {
+    padding: 0.12rem 0.4rem;
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .workout-description {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    line-height: 1.25;
+  }
+
+  .week-stats {
+    gap: 0.4rem;
+  }
+
+  .stat {
+    padding: 0.5rem;
+    border-left-width: 3px;
+  }
+
+  .stat .label {
+    font-size: 0.7rem;
+  }
+
+  .stat .value {
+    font-size: 0.9rem;
+  }
+
+  .zone-legend {
+    padding: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .zone-legend h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .zone-items {
+    gap: 0.4rem;
+  }
+
+  .zone-item {
+    padding: 0.4rem;
+  }
+
+  .zone-color {
+    width: 18px;
+    height: 18px;
+  }
+
+  .zone-item span {
+    font-size: 0.75rem;
+  }
+
+  .training-tips {
+    padding: 0.6rem;
+  }
+
+  .training-tips h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .training-tips li {
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+    line-height: 1.3;
+  }
+
+  .training-tips strong {
+    font-size: 0.75rem;
+  }
+}
