@@ -3,6 +3,7 @@ import InputForm from './components/InputForm';
 import ResultsDisplay from './components/ResultsDisplay';
 import PaceCalculator from './components/PaceCalculator';
 import TrainingPlan from './components/TrainingPlan';
+import NutritionCalculator from './components/NutritionCalculator';
 import { calculateHeartRateZones, calculateLactateThresholdZones } from './utils/heartRateCalculator';
 import './App.css';
 
@@ -31,7 +32,7 @@ function App() {
     { id: 'calculator', label: 'Heart Rate Calculator', icon: '💓' },
     { id: 'pace', label: 'Pace Calculator', icon: '⏱️' },
     { id: 'training-plan', label: 'Training Plan', icon: '📋' },
-    { id: 'settings', label: 'Settings', icon: '⚙️' }
+    { id: 'nutrition', label: 'Nutrition Calculator', icon: '🥗' }
   ];
 
   const renderTabContent = () => {
@@ -58,17 +59,10 @@ function App() {
             <TrainingPlan />
           </div>
         );
-      case 'settings':
+      case 'nutrition':
         return (
           <div className="tab-content">
-            <div className="placeholder-content">
-              <h2>Settings</h2>
-              <p>Here you can set personal information, unit preferences, etc.</p>
-              <div className="feature-coming-soon">
-                <span>⚙️</span>
-                <p>Feature under development, coming soon...</p>
-              </div>
-            </div>
+            <NutritionCalculator />
           </div>
         );
       default:

@@ -952,3 +952,113 @@
     font-size: 0.75rem;
   }
 }
+/* Nutrition Intake Card Styles */
+.intake-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4c51bf;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.intake-nutrients {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.intake-nutrient {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+}
+.intake-nutrient.carbs {
+  background: #ff9800;
+  color: white;
+}
+.intake-nutrient.protein {
+  background: #2196f3;
+  color: white;
+}
+.intake-nutrient.fat {
+  background: #f59e0b;
+  color: white;
+}
+.intake-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.intake-nutrients {
+  display: flex;
+  flex-direction: column;
+}
+/* 优化营养摄入卡片样式 */
+.nutrition-intake-card {
+  margin-top: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #f0f0f;
+  margin-bottom: 8px;
+  font-size: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.intake-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.intake-nutrients {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.intake-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #f0f0f;
+  margin-bottom: 8px;
+  font-size: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.nutrient-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c757d;
+  min-width: 60px;
+}
+.intake-nutrient {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 80px;
+  text-align: center;
+}
+.intake-nutrient.carbs {
+  background: #ff9800;
+  color: white;
+}
+.intake-nutrient.protein {
+  background: #2196f3;
+  color: white;
+}
+.intake-nutrient.fat {
+  background: #f59e0b;
+  color: white;
+}
